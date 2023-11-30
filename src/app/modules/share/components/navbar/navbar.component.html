@@ -1,0 +1,43 @@
+<div class="bg-[#2474E5] text-white">
+    <div class="flex h-16 items-center justify-between px-5 lg:px-20">
+        <a href="/">
+            <img src="https://storage.googleapis.com/fe-production/svgIcon/icon_vxr_full_2.svg" alt="logo-booking" />
+        </a>
+        <div class="flex items-center">
+            <button class="mr-6">
+                <a href="#">
+                    <span class="text-sm font-normal">Tra cứu vé</span>
+                </a>
+            </button>
+            <button mat-icon-button [matMenuTriggerFor]="contact">
+                <mat-icon>local_phone</mat-icon>
+            </button>
+
+            <mat-menu #contact="matMenu" yPosition="below" xPosition="before" class="mt-3">
+                <span class="px-5"> <a href="#" class="text-blue-500">1900.699.799</a> - Đặt vé </span>
+                <span class="px-5"> <a href="#" class="text-blue-500">1900.799.899</a> - Khiếu nại, Góp ý </span>
+            </mat-menu>
+
+            <button *ngIf="true" mat-raised-button type="" color="primary" (click)="openLoginDialog()">Đăng nhập</button>
+
+            <div *ngIf="false" class="relative ml-3 flex items-center">
+                <div class="flex items-center space-x-5">
+                    <span class="text-lg font-medium">Quan Nguyen</span>
+                    <button mat-button [matMenuTriggerFor]="profileMenu">
+                        <img
+                            class="h-10 w-10"
+                            src="https://www.shareicon.net/data/128x128/2016/05/24/770117_people_512x512.png"
+                            alt="avatar_profile"
+                        />
+                    </button>
+
+                    <mat-menu #profileMenu="matMenu" xPosition="before" class="mt-3">
+                        <button mat-menu-item>Thông tin tài khoản</button>
+                        <button mat-menu-item>Lịch sử đặt vé</button>
+                        <button mat-menu-item>Đăng xuất</button>
+                    </mat-menu>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
